@@ -1,0 +1,13 @@
+<launch>    
+  
+    <!--- Run gmapping -->
+    <include file="$(find turtlebot_navigation)/config/gmapping_turtlebot.launch" />
+   
+    <!--- Run explore -->
+    <include file="$(find explore_real)/move.xml" />
+    <include file="$(find explore_real)/explore_slam.xml" />  
+
+    <!--- Run Move Base -->
+    <!---  <include file="$(find turtlebot_navigation)/config/move_base_turtlebot.launch" /> -->
+    
+</launch>

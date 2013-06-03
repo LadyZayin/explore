@@ -1,0 +1,14 @@
+<launch>
+  <master auto="start"/>
+  <param name="/use_sim_time" value="true"/>
+   
+  <!--- Run gazebo --> 
+  <node name="gazebo" pkg="gazebo" type="gazebo" args="-u $(find turtlebot_gazebo)/worlds/empty.world" respawn="false" output="screen"/>
+  <node name="gazebo_gui" pkg="gazebo" type="gui" />  
+
+  <!--- Turtlebot model -->
+  <param name="robot_description" command="$(find xacro)/xacro.py '$(find turtlebot_description)/urdf/turtlebot.urdf.xacro'" />
+
+  <node name="spawn_turtlebot_model" pkg="gazebo" type="spawn_model" args="$(optenv ROBOT_INITIAL_POSE) -unpause -urdf -param robot_description -model turtlebot"   respawn="false" output="screen"/>
+  
+</launch>

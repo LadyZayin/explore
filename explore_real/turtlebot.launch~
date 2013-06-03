@@ -1,0 +1,11 @@
+<launch>
+  <master auto="start"/>
+  <param name="/use_sim_time" value="false"/>
+   
+  <!--- Minimal bringup -->
+  <include file="$(find turtlebot_bringup)/minimal.launch" />
+
+  <!--- Run the camera -->
+  <include file="$(find turtlebot_bringup)/kinect.launch" /> 
+  
+</launch>
