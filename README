@@ -1,0 +1,9 @@
+To launch explore_real:
+
+roslaunch explore_real turtlebot.launch
+roslaunch explore_real explore_slam.launch
+
+To launch explore_gazebo:
+
+roslaunch explore_gazebo gazebo.launch
+roslaunch explore_gazebo explore_slam.launch
