@@ -1,3 +1,6 @@
+Place explore_real and explore_gazebo in the same folder as explore and explore_stage
+
+
 To launch explore_real:
 
 roslaunch explore_real turtlebot.launch
